@@ -1,0 +1,4 @@
+# THIS SCRIPT IS TO TAKE FULLSCREEN PICTURES WITHOUT SAVING (JUST CLIPBOARD)
+grim "img" && cat "img" | wl-copy
+
+
