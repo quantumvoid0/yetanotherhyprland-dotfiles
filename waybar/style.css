@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  border-radius: 0;
+  min-height: 0;
+  color: #3a3b51;
+  font-weight: 400;
+  margin: 0;
+  border: none;
+  text-shadow: none;
+  transition: none;
+  box-shadow: none;
+  font-family: "Roboto", "Font Awesome 5 Free";
+}
+
+window#waybar {
+  background: transparent;
+  color: #3a3b51;
+  padding: 0px;
+  margin: 0;
+  border:none;
+  border-radius: 20px;
+}
+
+.modules-left {
+  padding-left: 5px;
+  padding-top:2px;
+  padding-bottom:4px;
+}
+
+.modules-right {
+  padding-right: 5px;
+  padding-top:4px;
+  padding-bottom:4px;
+}
+.modules-center {
+  padding-top:4px;
+  padding-bottom:4px;
+}
+
+#workspaces {
+  margin: 0px;
+
+}
+
+#workspaces button {
+  color: #3a3b51;
+  background: rgba(221, 221, 221, 0.8);
+  min-width: 30px;
+  transition: min-width 0.1s ease-in; 
+  padding: 0 4px;
+  border-radius: 20px;
+  margin: 5px 3px;
+}
+
+#workspaces button:hover {
+  background: rgba(221, 221, 221, 0.8); 
+  border: none;
+  min-width: 50px; 
+  border-radius: 20px; 
+  transition: min-width 0.1s ease-in; 
+}
+
+
+
+
+#workspaces button.visible {
+  border: none;
+  border-radius: 20px;
+  background: rgba(221, 221, 221, 0.8);
+}
+
+#workspaces button.visible:hover {
+  border: none;
+  border-radius: 20px;
+  background: rgba(221, 221, 221, 0.8);
+}
+
+#workspaces button.active {
+  border: none;
+  border-radius: 20px;
+  background: rgba(221, 221, 221, 0.8);
+}
+
+#workspaces button.active:hover {
+  border: none;
+  border-radius: 20px;
+  background: rgba(221, 221, 221, 0.8);
+}
+
+#workspaces button.urgent {
+  border: 2px solid #cc241d;
+  background: rgba(221, 221, 221, 0.8);
+  color: #3a3b51;
+}
+
+#custom-clock {
+	color:#3a3b51;
+	background:rgba(221, 221, 221, 0.8);
+	font-size:14.47px;
+	border-radius: 20px;
+	padding:5px 20px 7px;
+	min-width:30px;
+	transition: min-width 0.2s ease-in;
+	margin:4.5px 0px;
+}
+#custom-clock:hover {
+ transition: min-width 0.2s ease-in;
+ min-width:80px;
+}
+#window {
+  color: #3a3b51;
+  background: rgba(221, 221, 221, 0.8);
+  border-radius: 20px;
+  padding: 5px 30px 7px;
+  margin: 4.3px 0px;
+}
+
+
+#pulseaudio {
+  color: #3a3b51;
+  background: rgba(221, 221, 221, 0.8);
+  border-radius: 20px;
+  padding: 5px 25px 6px;
+  margin: 4.3px 0px;
+  transition: min-width 0.1s ease-in;
+  min-width:10px;
+}
+#pulseaudio:hover {
+  transition: min-width 0.1s ease-in;
+  min-width:70px;
+}
+
+#pulseaudio.muted {
+  color: #3a3b51;
+  background: #D2665A;
+  border-radius: 20px;
+  padding: 5px 25px 6px;
+  margin: 4.5px 0px;
+}
+
+#mpris {
+  color: #3a3b51;
+  border: none;
+  background: rgba(221, 221, 221, 0.8);
+  padding: 5px 25px 6px;
+  min-width:300px;
+  border-radius: 20px;
+  margin: 4.5px 0px;
+}
+#bluetooth {
+  background:rgba(221, 221, 221, 0.8);
+  border-radius: 20px;
+  color:#3a3b51;
+  padding: 5px 10px 6px;
+  margin: 4.5px 0px;
+  transition: min-width 0.1s ease-in;
+  min-width:30px;
+}
+ #custom-wofi {
+  background:rgba(221, 221, 221, 0.8);
+  border-radius: 20px;
+  color:#3a3b51;
+  padding: 5px 10px 6px;
+  margin: 4.5px 0px;
+  transition: min-width 0.1s ease-in;
+  min-width:80px;
+}
+#bluetooth:hover {
+  transition: min-width 0.1s ease-in;
+  min-width:70px;
+  }
+#custom-wofi:hover {
+  transition: min-width 0.1s ease-in;
+  min-width:100px;
+  }
+  #custom-power , #custom-stats , #network {
+  background:transparent;
+  border-radius: 20px;
+  color:rgba(221, 221, 221, 0.8);
+  font-size: larger;
+  padding: 0px 10px 0px;
+  margin: 4.5px 0px;
+  transition: min-width 0.1s ease-in;
+  min-width:5px;
+  }
