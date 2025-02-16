@@ -1,0 +1,124 @@
+{
+  "layer": "top",
+  "position": "top",
+  "auto-hide":"true",
+  "height": 35,
+  "width": 1900,
+  "spacing": 5, 
+  "margin-bottom" :-10,
+  "margin-top":2,
+  "margin-right" :0,
+  "margin-left" :0,
+
+
+  "modules-left": [
+    "custom/wofi",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "mpris",
+    "hyprland/window"
+    
+   ],
+
+  "modules-right": [
+    "pulseaudio",
+    "bluetooth",
+    "custom/stats",
+    "network",
+    "custom/power",
+    "custom/clock"
+  ],
+  "custom/stats" : {
+    "format" : "",
+    "on-click":"kitty btop"
+  },
+  "custom/power": {
+    "format":"",
+    "on-click":"hyprlock"
+  },
+  "custom/wofi": {
+    "format":"<span>  Apps</span>",
+    "on-click":"pkill wofi || wofi --show drun"
+  },
+  "custom/clock": {
+        "exec": "~/.config/waybar/clock.sh",
+        "return-type": "json",
+	"on-click":"kitty tty-clock -c -C 7"
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "active-only": false,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "<span></span>",
+      "default": "<span></span>"
+    },
+    "persistent-workspaces": {
+        "*": 1
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{class}",
+    "rewrite": {
+      "": "",
+      "~": "  Terminal",
+      "kitty": "  Terminal",
+      "io.github.TheWisker.Cavasik": "  Visualizer",
+      "org.mozilla.Thunderbird" : "  Thunderbird",
+      "pinta":"  Image Editor",
+      "nwg-look":"  Appearance",
+      "org.vinegarhq.Sober":"  Roblox",
+      "nemo":"  Files",
+      "nm-connection-editor":"  Network",
+      "blueman-manager":"  Bluetooth",
+      "org.pulseaudio.pavucontrol":"  Volume",
+      "firefox":"  Firefox",
+      "Code":"  Code"
+    }
+  },
+
+
+  "pulseaudio": {
+    "format": "<span>  </span>{volume}%",
+    "format-muted": "<span>  </span>{volume}%",
+    "format-source": "{volume}%",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": false,
+    "max-volume": 100
+  },
+
+   "custom/paddc": {
+    "format": " ",
+    "tooltip": false
+  },
+
+  "mpris": {
+    "format": "  {title}  ",
+    "max-length": 40
+  },
+
+  "network": {
+    "return-type": "json",
+    "format": "",
+    "tooltip": true,
+    "on-click": "nm-connection-editor",
+    "interval": 1,
+    "min-length": 1,
+    "max-length": 12
+  },
+
+  "bluetooth": {
+    "format": "<span>  </span>",
+    "format-connected":"<span>  </span>",
+    "on-click": "blueman-manager",
+    "interval": 1,
+    "min-length": 1,
+    "max-length": 10
+  }
+}
